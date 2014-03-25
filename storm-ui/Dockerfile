@@ -1,5 +1,5 @@
-FROM wurstmeister/storm
-MAINTAINER Wurstmeister
+FROM gomezd/storm
+MAINTAINER gomezd
 RUN /usr/bin/config-supervisord.sh ui
 
 EXPOSE 8080
