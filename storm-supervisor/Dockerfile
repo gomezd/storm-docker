@@ -1,5 +1,5 @@
-FROM wurstmeister/storm
-MAINTAINER Wurstmeister
+FROM gomezd/storm
+MAINTAINER gomezd
 
 EXPOSE 6700
 EXPOSE 6701
