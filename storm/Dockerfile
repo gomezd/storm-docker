@@ -2,8 +2,9 @@ FROM ubuntu
 
 MAINTAINER gomezd
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise universe" >> /etc/apt/sources.list;
-RUN apt-get update; apt-get install -y unzip openjdk-6-jdk wget supervisor
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise universe" >> /etc/apt/sources.list; apt-get update;
+RUN apt-get install -y openjdk-6-jdk wget
+RUN apt-get install supervisor
 
 RUN wget -q -N http://apache.petsads.us/incubator/storm/apache-storm-0.9.1-incubating/apache-storm-0.9.1-incubating.tar.gz; tar -xzf apache-storm-0.9.1-incubating.tar.gz -C /usr/share/;
 RUN ln -s /usr/share/apache-storm-0.9.1-incubating /usr/share/storm; rm apache-storm-0.9.1-incubating.tar.gz
